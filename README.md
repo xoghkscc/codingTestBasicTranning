@@ -48,6 +48,35 @@ class Solution {
 }
 ```
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/22dac23c-d434-4310-b63e-65c293eb7e9d)
+
+```java
+class Solution {
+    public String[] solution(String[] todo_list, boolean[] finished) {
+        int todo_count=0; // 해야할 일의 개수
+        
+        for(int i = 0; i < finished.length; i++){
+            if(!finished[i]) todo_count++;
+        }
+        
+        String[] answer = new String[todo_count];
+        
+        int index=0;
+        
+        for(int i = 0; i < finished.length; i++){
+            if(!finished[i]) {
+                answer[index] = todo_list[i];
+                index++;
+            }
+        }
+        
+        return answer;
+    }
+}
+```
+
+
 ## 13일차
 
 ### 1번 문제
