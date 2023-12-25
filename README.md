@@ -87,6 +87,30 @@ class Solution {
 }
 ```
 
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/7c1293db-b5a1-4d88-956b-a0fc95816777)
+
+```java
+class Solution {
+    public int solution(int[] num_list) {
+        int answer = 0;
+        
+        if(num_list.length >= 11){
+            for(int i = 0; i < num_list.length; i++){
+                answer += num_list[i];
+            }
+        } else {
+            answer = 1;
+            for(int i = 0; i < num_list.length; i++){
+                answer *= num_list[i];
+            }
+        }
+        
+        return answer;
+    }
+}
+```
+
 ## 14일차
 
 ### 1번 문제
