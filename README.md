@@ -22,6 +22,46 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/31e0ebd7-318f-4a30-836f-bc553c033d86)
+
+```java
+import java.util.Arrays; //꼭 기억하자!!
+class Solution {
+    public int solution(int[] arr) {
+        int answer = 0;
+        
+        int x = 0;
+        
+        while(true){
+            x++;
+            
+            int[] temp = Arrays.copyOfRange(arr, 0, arr.length); // 단순히 =로 대입하면 주소복사가 되므로 arr 갑이 변경될때 tmp도 같이 변경된다.
+            
+            for(int i = 0; i < arr.length; i++){
+                if(arr[i] >= 50 && arr[i] % 2 == 0) {
+                    arr[i] = arr[i] / 2;
+                } else if(arr[i] < 50 && arr[i] % 2 == 1){
+                    arr[i] = (arr[i] * 2) + 1;
+                }
+
+            }  
+                       
+            if(Arrays.equals(temp, arr)){ // 배열 비교는 Arrays의 equals 메서드를 쓰는 것이 좋다
+                answer = x-1;
+                break;
+            } 
+        }
+        
+         
+        return answer;
+    }
+}
+```
+
+*    문제를 이해하기 너무 어려웠으며 Arrays 컬렉션들을 활용해야 문제 풀기가 쉬운 것 같다.
+
+
 ## 14일차
 
 ### 1번 문제
