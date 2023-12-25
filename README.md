@@ -109,5 +109,24 @@ class Solution {
 
 * 느낀점:Arrays.copyOfRange(원본 배열, 복사할 시작 인덱스, 복사할 끝 인덱스)-배열을 복사하는 메서드를 배열 문제에서 많이 활용해야할 것 같다.
 
+### 5번 문제
+<img width="757" alt="image" src="https://github.com/xoghkscc/codingTest/assets/82793713/221e9523-79bf-449e-8047-a5c21cd2afb9">
+
+```java
+class Solution {
+    public int[] solution(int[] num_list, int n) {
+       
+        int length = ((num_list.length - 1) / n) + 1; // num_list의 첫번째 수는 무조건 들어가기에 두번째부터 개수를 센 뒤 n으로 나우었을 때 몫 + 1이 개수이다.
+        int[] answer = new int[length];
+        
+        for(int i = 0; i*n <num_list.length; i++ ){
+            answer[i] = num_list[i*n];
+        }
+        
+        return answer;
+    }
+}
+```
+
 
 
