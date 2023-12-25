@@ -75,7 +75,23 @@ class Solution {
     }
 }
 ```
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/e256b0e7-ad4e-4667-8e52-5627175c1c4a)
 
+```java
+class Solution {
+    public int solution(int[] numbers, int n) {
+        int answer = 0;
+        
+        for(int i = 0; i < numbers.length; i++){
+            answer += numbers[i];
+            if(answer > n) break;
+        }
+        
+        return answer;
+    }
+}
+```
 
 ## 13일차
 
