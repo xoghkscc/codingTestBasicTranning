@@ -29,6 +29,24 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/a601e31b-d551-4f9b-8366-3563e1c4d1ff)
+
+```java
+class Solution {
+    public String[] solution(String[] names) {
+        int length = ((names.length - 1) / 5) + 1; // 첫번째 인원은 무조건 탑승하니까 1을 뺀 나머지 인원들에 대해서 5를 나눈 몫 + 1이 길이이다.
+        String[] answer = new String[length];
+        
+        for(int i = 0; i < length; i++){
+            answer[i] = names[i*5];
+        }
+        
+        return answer;
+    }
+}
+```
+
 ## 13일차
 
 ### 1번 문제
