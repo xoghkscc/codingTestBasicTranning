@@ -63,6 +63,29 @@ class Solution {
 *    문제를 이해하기 너무 어려웠으며 Arrays 컬렉션들을 활용해야 문제 풀기가 쉬운 것 같다.
 
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/682e8404-3a4c-4edf-b2a5-fbe51130e93c)
+
+```java
+class Solution {
+    public int solution(int[] num_list) {
+        int answer = 0;
+        
+        for(int i = 0; i < num_list.length; i++){
+            while(true){
+                if(num_list[i] == 1) break;
+
+                num_list[i] = num_list[i] % 2 == 0 ? num_list[i] / 2 : (num_list[i] - 1) / 2;
+                
+                answer++;
+            
+            }
+        }     
+        return answer;
+    }
+}
+```
+
 ## 14일차
 
 ### 1번 문제
