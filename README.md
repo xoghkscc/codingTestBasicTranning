@@ -111,6 +111,24 @@ class Solution {
 }
 ```
 
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/374b3ddc-b8b2-493a-ae81-e896821f0630)
+
+```java
+class Solution {
+    public int solution(String myString, String pat) {
+        int answer = 0;
+        
+        myString = myString.toUpperCase();
+        pat = pat.toUpperCase();
+        
+        answer = myString.contains(pat) ? 1 : 0;
+       
+        return answer;
+    }
+}
+```
+
 ## 14일차
 
 ### 1번 문제
