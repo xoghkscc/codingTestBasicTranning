@@ -3,7 +3,7 @@
 ## 14일차
 
 ### 1번 문제
-![image](https://github.com/xoghkscc/codingTest/assets/82793713/afb0b7ea-5a7e-41e7-a3ea-f3481e28a700)
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/00e40d4a-fcce-45ad-8a37-6ed7fd7ee0eb)
 
 ```java
 class Solution {
