@@ -1,5 +1,27 @@
 # codingTest
 
+## 15일자
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/d46cf7de-3fe5-4a17-b20d-eabddaaaba33)
+```java
+class Solution {
+    public int[] solution(int[] arr) {
+        int[] answer = new int[arr.length];
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] >= 50 && arr[i] % 2 == 0) {
+                arr[i] = arr[i] / 2;
+            } else if(arr[i] < 50 && arr[i] % 2 == 1){
+                arr[i] = arr[i] * 2;
+            }
+        }   
+        answer = arr;    
+        return answer;
+    }
+}
+```
+
 ## 14일차
 
 ### 1번 문제
