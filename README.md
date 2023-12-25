@@ -22,6 +22,7 @@ class Solution {
 }
 ```
 
+
 ### 2번 문제
 ![image](https://github.com/xoghkscc/codingTest/assets/82793713/31e0ebd7-318f-4a30-836f-bc553c033d86)
 
