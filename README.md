@@ -95,6 +95,7 @@ class Solution {
 
 ### 4번 문제
 <img width="762" alt="image" src="https://github.com/xoghkscc/codingTest/assets/82793713/be0eaa34-0b52-4fc8-8bca-7fe8eb3f6cd2">
+
 ```java
 import java.util.Arrays;
 
@@ -106,5 +107,8 @@ class Solution {
 }
 ```
 
-#### 느낀점:
+#### 느낀점: 다른 사람의 풀이를 보니 Arrays.copyOfRange(원본 배열, 복사할 시작 인덱스, 복사할 끝 인덱스)
+를 많이 
+
+
 
