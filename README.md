@@ -130,6 +130,8 @@ class Solution {
 }
 ```
 
+*    contains메서드를 기억해 두자
+
 ## 14일차
 
 ### 1번 문제
