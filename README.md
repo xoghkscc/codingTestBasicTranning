@@ -51,3 +51,43 @@ class Solution {
     }
 }
 ```
+
+### 3번 문제
+<img width="771" alt="image" src="https://github.com/xoghkscc/codingTest/assets/82793713/d3f840b0-f07b-4592-8740-17a0899d7792">
+
+```java
+class Solution {
+    public String[] solution(String[] str_list) {
+        String[] answer = {};
+        
+        int find_index = 0;
+        String type = "";
+        
+        for(int i = 0; i < str_list.length; i++){
+            find_index++;
+            if(str_list[i].equals("l")){
+                type = "l";
+                break;
+            } else if(str_list[i].equals("r")){
+                type = "r";
+                break;
+            }
+        }
+        
+        if(type.equals("l")){
+            answer = new String[find_index-1];
+            for(int i = 0; i < find_index-1; i++){
+                answer[i] = str_list[i];
+            }
+        } else if(type.equals("r")){
+            answer = new String[str_list.length - find_index];
+            for(int i = 0; i < str_list.length - find_index; i++){
+                answer[i] = str_list[find_index+i];
+            }
+        }
+        
+        return answer;
+    }
+}
+```
+
