@@ -2,7 +2,32 @@
 
 ## 14일차
 
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/afb0b7ea-5a7e-41e7-a3ea-f3481e28a700)
 
+```java
+class Solution {
+    public int solution(int[] num_list) {
+        int answer = 0;
+        
+        int odd_number = 0; //홀수 합
+        int even_number = 0; //짝수 합
+
+        
+        for(int i = 0; i < num_list.length; i++){
+            if((i+1) % 2 != 0){
+                odd_number += num_list[i];
+            } else {
+                even_number += num_list[i];
+            }
+        }
+        
+        answer = odd_number > even_number ? odd_number : even_number;
+        
+        return answer;
+    }
+}
+```
 
 ## 13일차
 
