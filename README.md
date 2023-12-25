@@ -5,7 +5,7 @@
 ### 1번 문제
 <img width="773" alt="image" src="https://github.com/xoghkscc/codingTest/assets/82793713/82799151-b936-460d-a2ce-527fa656881a">
 
-```C
+```java
 class Solution {
     public int[] solution(int[] num_list, int n) {
         int[] answer = new int[num_list.length-(n-1)]; // num_list의 n번째 원소부터 마지막 원소까지의 개수에 대한 배열 길이를 생성
@@ -21,7 +21,7 @@ class Solution {
 ### 2번 문제
 <img width="761" alt="image" src="https://github.com/xoghkscc/codingTest/assets/82793713/61d478ec-d927-47a0-a49e-496eb6b0b09e">
 
-```C
+```java
 class Solution {
     public int[] solution(int[] num_list, int n) {
         int[] answer = new int[num_list.length];
