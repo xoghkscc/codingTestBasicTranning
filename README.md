@@ -93,6 +93,31 @@ class Solution {
 }
 ```
 
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/458689d7-44f5-4806-832a-10956300ea88)
+
+```java
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = new int[arr.length];
+        
+        for(int i = 0; i < queries.length; i++){
+            int [] query = queries[i];
+            int s = query[0];
+            int e = query[1];
+            
+            for(int j = s; j <= e; j++){
+                arr[j]++;
+            }
+            
+        }
+        answer = arr;
+        return answer;
+    }
+}
+```
+
+
 ## 13일차
 
 ### 1번 문제
