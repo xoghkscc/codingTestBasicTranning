@@ -60,32 +60,31 @@ class Solution {
     public String[] solution(String[] str_list) {
         String[] answer = {};
         
-        int find_index = 0;
-        String type = "";
+        int find_index = 0; // 최초 l 혹은 r의 위치를 담을 변수
+        String type = ""; // 최초가 l인지 r인지 구분하는 타입을 담을 변수
         
         for(int i = 0; i < str_list.length; i++){
             find_index++;
             if(str_list[i].equals("l")){
                 type = "l";
-                break;
+                break; //찾았다면 반복문 탈출
             } else if(str_list[i].equals("r")){
                 type = "r";
-                break;
+                break; //찾았다면 반복문 탈출
             }
         }
         
         if(type.equals("l")){
             answer = new String[find_index-1];
             for(int i = 0; i < find_index-1; i++){
-                answer[i] = str_list[i];
+                answer[i] = str_list[i]; // 최초가 l이라면 find_index기준 왼쪽에 있는 문자열 담기
             }
         } else if(type.equals("r")){
             answer = new String[str_list.length - find_index];
             for(int i = 0; i < str_list.length - find_index; i++){
-                answer[i] = str_list[find_index+i];
+                answer[i] = str_list[find_index+i]; // 최초가 l이라면 find_index기준 오른쪽에 있는 문자열 담기
             }
-        }
-        
+        }  
         return answer;
     }
 }
