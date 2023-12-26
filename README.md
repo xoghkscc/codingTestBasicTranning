@@ -18,7 +18,7 @@ class Solution {
 }
 ```
 
-*    왠지 String 메서드를 많이 안써야할 것 같지만 인터넷을 보고 다른 풀이도 보니 다들 메서드를 많이 활용중인 것 같다.
+*    느낀점: 왠지 String 메서드를 많이 안써야할 것 같지만 인터넷을 보고 다른 풀이도 보니 다들 메서드를 많이 활용중인 것 같다.
 
 ### 2번 문제
 ![image](https://github.com/xoghkscc/codingTest/assets/82793713/24013267-e459-453f-aab5-99008178b23c)
@@ -41,7 +41,59 @@ class Solution {
 }
 ```
 
-*    핵심은 포함된 단어의 index+1만큼 잘라 다시 포함 조사를 반복해 나가는 것이 특징
+*    느낀점: 핵심은 포함된 단어의 index+1만큼 잘라 다시 포함 조사를 반복해 나가는 것이 특징
+
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/3147d151-8872-4d73-82e2-90efc65acb31)
+
+```java
+import java.util.*;
+
+class Solution {
+    public String[] solution(String[] strArr) {
+        Boolean[] booArr = new Boolean[strArr.length];
+        
+        int count = 0;
+        
+        for(int i = 0; i < strArr.length; i++){
+            if(strArr[i].indexOf("ad") > -1){ 
+                booArr[i] = false; //ad가 포함된 경우
+            } else {
+                booArr[i] = true;  //ad가 포함 안된 경우
+                count++;
+            }
+        }
+        
+        String[] answer = new String[count];
+        
+        count = 0;
+        
+        for(int i = 0; i < strArr.length; i++){
+            if(booArr[i]){
+                answer[count] = strArr[i];
+                count++;
+            }
+        }
+        
+        return answer;
+    }
+}
+```
+
+*    느낀점: strArr와 대응하는 booArr을 만들어 strArr의 원소 중 ad라는 문자가 포함되면 booArr 원소는 false 아니면 true 그런데 다들 ArrayList를 만들어서 푸는거 보니 앞으로 변환하는 걸 자주 시도해봐야겟다.
+
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/eaf90118-9890-4027-b64f-c7ce5629809a)
+
+```java
+class Solution {
+    public String[] solution(String my_string) {
+        String[] answer = {};
+        answer = my_string.split(" ");
+        return answer;
+    }
+}
+```
 
 ## 16일차
 
