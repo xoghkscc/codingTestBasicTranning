@@ -29,6 +29,61 @@ class Solution {
 }
 ```
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/933cbb0b-4a12-4cb7-97e3-f493f621c7a0)
+
+```java
+class Solution {
+    public String[] solution(String[] strArr) {
+        String[] answer = new String[strArr.length];
+        
+        for(int i = 0; i < strArr.length; i++){
+            answer[i] = i % 2 != 0 ? strArr[i].toUpperCase() : strArr[i].toLowerCase(); //삼항연산자 활
+        }
+        
+        return answer;
+    }
+}
+```
+
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/96695dbb-3d21-4ce5-a105-5c40a3a22d51)
+
+```java
+class Solution {
+    public String solution(String myString) {
+        String answer = "";
+        
+        for(int i = 0; i < myString.length(); i++){
+           if(myString.charAt(i) == 'a'){
+               answer += "A";
+           } else if(myString.charAt(i) >= 'B' && myString.charAt(i) <= 'Z'){ //A가 아닌 대문자
+               answer += (char) (myString.charAt(i) + 32); //char에 32를 더하면 대문자 -> 소문자 반대로 32를 빼면 소문자 -> 대문자
+           } else {
+               answer += myString.charAt(i);
+           }
+        }
+        
+        return answer;
+    }
+}
+```
+
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/1047071d-6219-4ae8-a3f3-5861de86964f)
+
+```java
+class Solution {
+    public String solution(String my_string, String alp) {
+        String answer = "";
+        
+        answer = my_string.replace(alp, alp.toUpperCase());
+        
+        return answer;
+    }
+}
+```
+
 ## 15일자
 
 ### 1번 문제
