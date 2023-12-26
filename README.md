@@ -20,6 +20,29 @@ class Solution {
 
 *    왠지 String 메서드를 많이 안써야할 것 같지만 인터넷을 보고 다른 풀이도 보니 다들 메서드를 많이 활용중인 것 같다.
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/24013267-e459-453f-aab5-99008178b23c)
+
+```java
+class Solution {
+    public int solution(String myString, String pat) {
+        int answer = 0;
+        
+        while(true){
+            if(myString.indexOf(pat) > -1){
+               myString = myString.substring(myString.indexOf(pat)+1, myString.length()); //ex) banana에서 ana가 포함된 index가 1 이므로 substring 2부터인 nana에서 ana 포함된 개수 찾기
+               answer++;
+            } else {
+                break;
+            }
+        }
+        return answer;
+    }
+}
+```
+
+*    핵심은 포함된 단어의 index+1만큼 잘라 다시 포함 조사를 반복해 나가는 것이 특징
+
 ## 16일차
 
 ### 1번 문제
