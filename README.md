@@ -1,9 +1,25 @@
 # codingTest
 
+## 16일자
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/04298912-79c8-4692-ad4c-7d870ef4bc16)
+
+```java
+class Solution {
+    public String solution(String myString) {
+        String answer = "";
+        answer = myString.toUpperCase();
+        return answer;
+    }
+}
+```
+
 ## 15일자
 
 ### 1번 문제
 ![image](https://github.com/xoghkscc/codingTest/assets/82793713/d46cf7de-3fe5-4a17-b20d-eabddaaaba33)
+
 ```java
 class Solution {
     public int[] solution(int[] arr) {
