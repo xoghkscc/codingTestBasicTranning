@@ -95,6 +95,39 @@ class Solution {
 }
 ```
 
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/ca121dfd-dc52-43bd-9da0-e5eaf518a0ca)
+
+```java
+import java.util.*;
+class Solution {
+    public String[] solution(String my_string) {
+        String[] answer = {};
+        
+        my_string = my_string.trim(); //양쪽 공백 제거
+        
+        String[] list = my_string.split(" "); // 공백을 split한 배열 만들기
+
+        List<String> listArray = new ArrayList<String>(); //공백이 아닌 값을 받을 list 만들어주기
+       
+        for(String str : list){
+            if(!str.isEmpty()){
+                listArray.add(str);
+            }
+        }        
+        answer = listArray.toArray(new String[listArray.size()]); //리스트를 배열로 반
+
+        return answer;
+    }
+}
+```
+
+*    느낀점: list 사용을 최소화하면서 isEmpty 메서드를 활용
+
+```java
+my_string.trim().split("[ ]+"); //정규표현식을 활용하여도 됨
+```
+
 ## 16일차
 
 ### 1번 문제
