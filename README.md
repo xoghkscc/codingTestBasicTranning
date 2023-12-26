@@ -15,6 +15,20 @@ class Solution {
 }
 ```
 
+
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/f095742c-317d-4d02-b827-1f163c300cd8)
+
+```java
+class Solution {
+    public String solution(String myString) {
+        String answer = "";
+        answer = myString.toLowerCase();
+        return answer;
+    }
+}
+```
+
 ## 15일자
 
 ### 1번 문제
