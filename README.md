@@ -1,6 +1,26 @@
 # codingTest
 
-## 16일자
+## 17일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/c9c20c04-1d9a-44ac-890e-172f9e4e3e82)
+
+```java
+class Solution {
+    public String solution(String myString, String pat) {
+        String answer = "";
+        int lastIndex = myString.lastIndexOf(pat); 
+        
+        answer = myString.substring(0, lastIndex) + pat;
+        
+        return answer;
+    }
+}
+```
+
+*    왠지 String 메서드를 많이 안써야할 것 같지만 인터넷을 보고 다른 풀이도 보니 다들 메서드를 많이 활용중인 것 같다.
+
+## 16일차
 
 ### 1번 문제
 ![image](https://github.com/xoghkscc/codingTest/assets/82793713/04298912-79c8-4692-ad4c-7d870ef4bc16)
@@ -84,7 +104,7 @@ class Solution {
 }
 ```
 
-## 15일자
+## 15일차차
 
 ### 1번 문제
 ![image](https://github.com/xoghkscc/codingTest/assets/82793713/d46cf7de-3fe5-4a17-b20d-eabddaaaba33)
