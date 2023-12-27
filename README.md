@@ -158,11 +158,11 @@ class Solution {
 }
 ```
 
-#### 다른 사람 풀이
+#### 다른 사람의 풀이
 ```java
 class Solution {
     public int solution(String myString, String pat) {
-        myString = myString.replace("A", "a").replace("B", "A").replace("a", "B");
+        myString = myString.replace("A", "a").replace("B", "A").replace("a", "B"); //대문자를 소문자로 바꿔서....
         return myString.contains(pat) ? 1 : 0;
     }
 }
