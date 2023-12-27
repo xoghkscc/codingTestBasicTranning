@@ -101,8 +101,35 @@ class Solution {
 
 *    문자열을 자르는 방식이 힘든것 같다. 다른 사람의 풀이처럼 처음부터 x로 자르고 리스트로 ""이 아닌 것을 받는 것이 더 수월할 것 같다. 또한 앞으로 정렬할 때에는 sort 메서드를 활용하자.
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/15be3828-c898-4cf0-a77e-dde992ba5da1)
 
+```java
+class Solution {
+    public int solution(String binomial) {
+        int answer = 0;
+        
+        String[] binomialArray = binomial.split(" ");
+      
+        int a = Integer.parseInt(binomialArray[0]);
+        String op = binomialArray[1];
+        int b = Integer.parseInt(binomialArray[2]);
 
+        switch(op){
+            case "+":
+                answer = a + b;
+                break;
+            case "-":
+                answer = a - b;
+                break;
+            case "*":
+                answer = a * b;
+                break;
+        }
+        return answer;
+    }
+}
+```
 
 
 ## 17일차
