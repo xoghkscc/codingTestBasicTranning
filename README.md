@@ -30,6 +30,81 @@ class Solution {
      그렇기 때문에 맨 끝에 임의의 수 a를 둬서 oxooxa -> [o, oo, a] -> [1, 2, 1-1]로 문제를 해결하였다.
      만약 맨끝이 x가 아니더라도 oxooxoa -> [o, oo, oa] -> [1, 2, 2-1] -> [1, 2, 1]로 해결완료 
 
+
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/4b3a1670-b166-45b7-a1d3-7cacf16684a0)
+
+```java
+import java.util.*;
+class Solution {
+    public String[] solution(String myString) { 
+        ArrayList<String> strList = new ArrayList<String>();
+        String[] answer = {};
+        
+        String [] strArray = myString.split(""); //문자 단위로 split
+        
+        String str = "";
+        
+        for(int i = 0; i < strArray.length; i++){
+            if(!strArray[i].equals("x")){
+                str += strArray[i];
+                if(i == strArray.length -1 ) strList.add(str); // 마지막 문자가 x가 아니면서 끝날 경우 리스트에 담아줘야함
+            } else if(!str.isEmpty()){
+                strList.add(str); 
+                str = "";
+            }
+        }
+
+        //사전순으로 정렬
+        for(int i = 0; i < strList.size(); i++){
+            for(int j = 0; j < strList.size(); j++){
+                if(strList.get(i).compareTo(strList.get(j)) < 0){
+                    String tmp = strList.get(i);
+                    strList.set(i, strList.get(j));
+                    strList.set(j, tmp);
+                }
+            }
+        }
+
+        answer = strList.toArray(new String[strList.size()]);
+        
+        return answer;
+    }
+}
+```
+
+### 다른 사람의 풀이
+```java
+class Solution {
+
+    public String[] solution(String myString) {
+        String[] tmp = myString.split("x");
+        Arrays.sort(tmp);
+        ArrayList <String> list = new ArrayList<>();
+
+        for (int i = 0; i < tmp.length; i++) {
+            if (!tmp[i].equals("")) {
+                list.add(tmp[i]);
+            }
+        }
+
+        String[] answer = new String[list.size()];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = list.get(i);
+        }
+
+        return answer;
+    }
+}
+```
+
+*    문자열을 자르는 방식이 힘든것 같다. 다른 사람의 풀이처럼 처음부터 x로 자르고 리스트로 ""이 아닌 것을 받는 것이 더 수월할 것 같다. 또한 앞으로 정렬할 때에는 sort 메서드를 활용하자.
+
+
+
+
+
 ## 17일차
 
 ### 1번 문제
