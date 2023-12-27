@@ -168,6 +168,17 @@ class Solution {
 }
 ```
 
+### 5번 문제
+
+```java
+class Solution {
+    public String solution(String rny_string) {
+        String answer = rny_string.replace("m", "rn");
+        return answer;
+    }
+}
+```
+
 ## 17일차
 
 ### 1번 문제
