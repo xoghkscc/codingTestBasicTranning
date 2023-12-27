@@ -1,4 +1,7 @@
-# codingTest
+# codingTest 기초 트레이닝
+
+## 참고할 사이트
+### https://earthteacher.tistory.com/169#gsc.tab=0
 
 ## 18일차
 
