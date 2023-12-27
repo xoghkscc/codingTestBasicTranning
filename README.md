@@ -1,5 +1,35 @@
 # codingTest
 
+## 18일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/e2266d29-67e1-4cd0-ba1d-0522cac5d594)
+
+```java
+class Solution {
+    public int[] solution(String myString) {
+        myString = myString + "a"; //뒤에 x를 제외한 임의의 수를 붙인다.
+        
+        String[] strArr = myString.split("x");
+
+        int[] answer = new int[strArr.length];
+        
+        for(int i = 0; i < strArr.length; i++){
+            answer[i] = strArr[i].length();
+        }
+        
+        answer[strArr.length - 1]--; //뒤에 임의의 수를 붙였기 때문에 그만큼의 길이인 1을 뺀다.
+        
+        return answer;
+    }
+}
+```
+
+*    문제의 조건는 x가 끝에 올 경우에도 나눠진 문자열의 길이는 0으로 제시하였는데 split을 할 경우 x가 맨 끝에 오는 경우는 null로 체크되어 길이 자체가 존재하지 않는다.
+     예를 들어 oxoox -> [o, oo] -> [1, 2] 그러나 문제의 의도는 [o, oo, ] -> [1, 2, 0]
+     그렇기 때문에 맨 끝에 임의의 수 a를 둬서 oxooxa -> [o, oo, a] -> [1, 2, 1-1]로 문제를 해결하였다.
+     만약 맨끝이 x가 아니더라도 oxooxoa -> [o, oo, oa] -> [1, 2, 2-1] -> [1, 2, 1]로 해결완료 
+
 ## 17일차
 
 ### 1번 문제
