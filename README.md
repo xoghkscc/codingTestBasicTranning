@@ -132,6 +132,32 @@ class Solution {
 ```
 
 
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTest/assets/82793713/17f5b8a0-f8e4-4920-8c11-9c21615fdb5f)
+
+```java
+class Solution {
+    public int solution(String myString, String pat) {
+        int answer = 0;
+        
+        String chgString = "";
+        
+        for(int i = 0; i < myString.length(); i++){
+            if(myString.charAt(i) == 'A') {
+                chgString += "B";
+            }else if(myString.charAt(i) == 'B') {
+                chgString += "A";
+            } else {
+                chgString += myString.charAt(i);
+            }
+        } 
+        answer = chgString.indexOf(pat) > -1 ? 1 : 0;
+        
+        return answer;
+    }
+}
+```
+
 ## 17일차
 
 ### 1번 문제
