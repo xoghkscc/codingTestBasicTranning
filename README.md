@@ -22,7 +22,10 @@ class Solution {
         }
         
         answer[strArr.length - 1]--; //뒤에 임의의 수를 붙였기 때문에 그만큼의 길이인 1을 뺀다.
-        
+
+        //String[] result = myString.split("x", myString.length());
+        //로 split하면 맨 끝이 x라도 빈 값으로 split함
+
         return answer;
     }
 }
