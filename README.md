@@ -3,6 +3,36 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+## 19일차
+
+###1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/9c777704-101c-43a6-bcf0-03982b749258)
+
+```java
+import java.util.*;
+
+class Solution {
+    public String[] solution(String myStr) {
+        
+        myStr = myStr.replace("a", " ");
+        myStr = myStr.replace("b", " ");
+        myStr = myStr.replace("c", " ");
+        
+        String[] myStrArr = myStr.split(" ");
+        ArrayList<String> list = new ArrayList<>();
+        
+        for(String str : myStrArr){
+            if(!str.isEmpty()) list.add(str);
+        }
+        
+        if(list.isEmpty()) list.add("EMPTY");
+
+        return list.toArray(new String[list.size()]);
+    }
+
+}
+```
+
 ## 18일차
 
 ### 1번 문제
