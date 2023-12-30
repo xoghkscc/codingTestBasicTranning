@@ -64,6 +64,40 @@ class Solution {
 
 *    느낀점: lsit.toArray 메서드는 String일때만 가능하고 int 배열은 불가능하다.
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/5a40b4bc-0b25-4e4b-98f5-de0bea7e8b1b)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr, boolean[] flag) {
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            if(flag[i]){
+                for(int j = 0; j < arr[i]*2; j++){
+                    list.add(arr[i]);
+                }
+            } else {
+                for(int j = 0; j < arr[i]; j++){
+                    list.remove(list.size()-1);
+                }
+            }
+        }
+        
+        int[] answer = new int[list.size()];
+        
+        for(int i = 0; i < list.size(); i++){
+            answer[i] = list.get(i);
+        }
+
+        return answer;
+    }
+}
+```
+
 ## 18일차
 
 ### 1번 문제
