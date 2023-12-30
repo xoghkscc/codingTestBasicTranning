@@ -3,6 +3,44 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+
+## 20일자
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/2068ad38-e4c6-4979-b980-9bbd23abcc13)
+
+```java
+class Solution {
+    public int[] solution(int[] arr) {
+        int index = 0;
+        
+        while(true){
+            if(Math.pow(2, index) == arr.length){
+                break;
+            } else if(Math.pow(2, index) < arr.length && Math.pow(2, index+1) > arr.length){
+                index++;
+                break;
+            } else {
+                index++;
+            }
+        }
+        
+        int[] answer = new int[(int) Math.pow(2, index)]; //Math.pow는 double타입이므로 int타입으로 형변환 필
+        
+        for(int i = 0; i < answer.length; i++){
+            if(i < arr.length){
+                answer[i] = arr[i];
+            } else {
+                answer[i] = 0;
+            }
+        }
+        
+        return answer;
+    }
+}
+```
+
+
 ## 19일차
 
 ### 1번 문제
