@@ -131,6 +131,43 @@ class Solution {
 }
 ```
 
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/7cc757c4-98b2-4227-83e0-c7e532b705e3)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr, int k) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            if(list.indexOf(arr[i]) == -1){
+                list.add(arr[i]);
+            }
+            
+            if(list.size() == k) break;
+        }
+        
+        if(list.size() < k) {
+            while(true){
+                list.add(-1);
+                
+                if(list.size() == k) break;
+            }
+        }
+        
+        int[] answer = new int[list.size()];
+        
+        for(int i = 0; i < list.size(); i++){
+            answer[i] = list.get(i);
+        }
+
+        return answer;
+    }
+}
+```
+
 ## 18일차
 
 ### 1번 문제
