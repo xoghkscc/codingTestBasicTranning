@@ -34,12 +34,49 @@ class Solution {
                 answer[i] = 0;
             }
         }
+
+        // return Arrays.copyOf(arr, (int) Math.pow(2, index)); 애초에 배열의 빈요소는 int타입에서는 0이 들어가기 때문에 이를 이용해도 됨
         
         return answer;
     }
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/896e17dd-ee74-4794-8d79-9b1962864f31)
+
+```java
+class Solution {
+    public int solution(int[] arr1, int[] arr2) {
+
+        int arrLength1 = arr1.length;
+        int arrLength2 = arr2.length;
+        
+        int arrSum1 = 0;
+        int arrSum2 = 0;
+        
+        for(int i = 0; i < Math.min(arrLength1, arrLength2); i++){
+            arrSum1 += arr1[i];
+            arrSum2 += arr2[i];
+        }
+        
+        int answer = 0;
+        
+        if(arrLength1 > arrLength2) {
+            answer = 1;
+        } else if(arrLength1 < arrLength2) {
+            answer = -1;
+        } else if(arrSum1 > arrSum2) {
+            answer = 1;
+        } else if(arrSum1 < arrSum2) {
+            answer = -1;
+        }
+        
+        
+        return answer;
+    }
+}
+```
 
 ## 19일차
 
