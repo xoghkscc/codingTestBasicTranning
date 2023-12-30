@@ -17,6 +17,8 @@ class Solution {
         myStr = myStr.replace("a", " ");
         myStr = myStr.replace("b", " ");
         myStr = myStr.replace("c", " ");
+
+        //myStr = myStr.replaceAll("a|b|c", " "); 정규표현식으로 위 3줄을 한번에 가능
         
         String[] myStrArr = myStr.split(" ");
         ArrayList<String> list = new ArrayList<>();
