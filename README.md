@@ -5,7 +5,7 @@
 
 ## 19일차
 
-###1번 문제
+### 1번 문제
 ![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/9c777704-101c-43a6-bcf0-03982b749258)
 
 ```java
