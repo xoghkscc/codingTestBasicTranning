@@ -78,6 +78,74 @@ class Solution {
 }
 ```
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/3985ebed-095d-4456-8236-999ae28a2c0f)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(String[] strArr) {
+        ArrayList<Integer> lengthList = new ArrayList<>();
+        
+        for(String str : strArr){
+            lengthList.add(str.length());
+        }
+        
+        Collections.sort(lengthList); // 길이 순서대로 정렬
+
+        int maxCount =0;
+        
+        for(int i = 0; i < lengthList.size(); i++){
+            int firstIndex = lengthList.indexOf(lengthList.get(i));
+            int lastIndex = lengthList.lastIndexOf(lengthList.get(i));
+            
+            if((lastIndex - firstIndex + 1) > maxCount) maxCount = lastIndex - firstIndex + 1; //즉 해당 숫자의 마지막 인덱스와 첫 인덱스를 빼고 +1한 것이 해당 숫자의 개수임
+            
+            i = lastIndex; // 중복할 필요 없으므로 i는 해당 숫자의 마지막 인덱스로 넘겨버
+            
+        }
+        return maxCount;
+    }
+}
+```
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/fced4f2a-2039-46ef-bd17-0d31bd9f3d92)
+
+```java
+class Solution {
+    public int[] solution(int[] arr, int n) {
+        for(int i = arr.length%2; i < arr.length; i = i + 2){
+            arr[i+1] = arr[i+1] + n;
+        }
+        
+        if(arr.length%2 == 1) arr[0] = arr[0] + n;
+
+        return arr;
+    }
+}
+```
+
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/fe151f95-1cf7-4f28-a0b8-4083aa8e7171)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] num_list) {
+        Arrays.sort(num_list);
+        int[] answer = new int[5];
+        
+        for(int i = 0; i < 5; i++){
+            answer[i] = num_list[i];
+        }
+        
+        return answer;
+    }
+}
+```
+
 ## 19일차
 
 ### 1번 문제
