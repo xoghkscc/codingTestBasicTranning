@@ -35,6 +35,35 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/515e6d84-e734-47ef-9a09-55218b9df594)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int num : arr){
+            for(int i = 0; i < num; i++){
+                list.add(num);
+            }
+        }
+                
+        int[] answer = new int[list.size()];
+        
+        for(int i = 0; i < list.size(); i++){
+            answer[i] = list.get(i);
+        }
+
+        return answer;
+    }
+}
+```
+
+*    느낀점: lsit.toArray 메서드는 String일때만 가능하고 int 배열은 불가능하다.
+
 ## 18일차
 
 ### 1번 문제
