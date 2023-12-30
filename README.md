@@ -98,6 +98,39 @@ class Solution {
 }
 ```
 
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/5847aa59-c1d8-4ece-bfa9-cf72bab06189)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
+        
+        for(int num : arr){
+            if(stack.isEmpty() || stack.peek() != num) {
+                stack.push(num);
+            } else {
+                stack.pop();
+            }
+        }
+        
+        if(stack.isEmpty()) stack.push(-1);
+    
+        Object[] object = stack.toArray();
+        
+        int[] answer = new int[stack.size()];
+        
+        for(int i = 0; i < stack.size(); i++){
+            answer[i] =(int) object[i];
+        }
+        
+        return answer;
+    }
+}
+```
+
 ## 18일차
 
 ### 1번 문제
