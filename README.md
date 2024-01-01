@@ -75,6 +75,35 @@ class Solution {
 }
 ```
 
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/0b712c48-e775-4cf9-a682-026df737bc03)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr, int[] delete_list) {
+        ArrayList<String> list = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            list.add(arr[i]+"");
+        }
+   
+        for(int i = 0; i < delete_list.length; i++){
+            list.remove(delete_list[i]+"");
+        }
+
+        int[] answer = new int[list.size()];
+        
+        for(int i = 0; i < answer.length; i++){
+            answer[i] =Integer.parseInt(list.get(i));
+        }                      
+                               
+        return answer;
+    }
+}
+```
+
 ## 21일차
 
 ### 1번 문제
