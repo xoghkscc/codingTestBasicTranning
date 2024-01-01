@@ -4,6 +4,29 @@
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
 
+## 21일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/de2e856a-5c71-4437-898d-f58fde27fb6a)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] num_list) {
+        Arrays.sort(num_list);
+
+        int[] answer = new int[num_list.length-5];
+        
+        for(int i = 5; i < num_list.length; i++){
+            answer[i-5] = num_list[i];
+        }
+        
+        return answer;
+    }
+}
+```
+
 ## 20일자
 
 ### 1번 문제
