@@ -64,6 +64,17 @@ class Solution {
 }
 ```
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/de7a3d54-13ab-44bd-b548-6ef6a87b6430)
+
+```java
+class Solution {
+    public String solution(int n) {  
+        return ""+n;
+    }
+}
+```
+
 ## 21일차
 
 ### 1번 문제
