@@ -27,6 +27,73 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/84c8b451-a993-4fc3-99cd-ea9acc504968)
+
+```java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] rank, boolean[] attendance) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < rank.length; i++){
+            list.add(rank[i]);
+        }
+
+        int answer = 0;
+        int cnt = 0;
+        int index = 10000;
+        for(int i = 0; i < rank.length; i++){
+            if(attendance[list.indexOf(i+1)]){
+                answer += index*list.indexOf(i+1);
+                index = index/100;
+                cnt++;
+            }
+            
+            if(cnt == 3) break;
+        }
+        
+        return answer;
+    }
+}
+```
+
+*    핵심은 list.indexOf를 통해 해당 위치(학생번호)를 찾아내는 것 또한 HashMap을 통해 map.put(rank[i], i)를 하면 key대로 정렬되므로 더 쉽게 가
+
+
+```java
+//다른 사람의 풀이
+import java.util.*;
+class Solution {
+    public int solution(int[] rank, boolean[] attendance) {
+        int ans = 0, cnt = 0, r = 1;
+        int[] abc = new int[3];
+        HashMap<Integer,Integer> m = new HashMap<>();
+        for(int i=0 ; i<rank.length ; i++)
+            m.put(rank[i],i);
+        while(cnt<3){
+            if(attendance[m.get(r)])
+                abc[cnt++] = m.get(r);
+            r++;
+        }
+        return abc[0]*10000 + abc[1]*100 + abc[2];
+    }
+}
+```
+
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/e122d7d2-98f7-4db5-ab51-6acb57fa793d)
+
+```java
+class Solution {
+    public int solution(double flo) {
+        String floStr = "" + flo;
+        return Integer.parseInt(floStr.split("\\.")[0]);
+    }
+}
+```
+
 ## 20일자
 
 ### 1번 문제
