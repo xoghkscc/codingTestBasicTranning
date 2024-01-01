@@ -104,6 +104,17 @@ class Solution {
 }
 ```
 
+### 5번문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/f4820f6f-adfd-46e1-b16d-8449bbb69d5b)
+
+```java
+class Solution {
+    public int solution(String my_string, String target) {
+        return my_string.contains(target) ? 1 : 0;
+    }
+}
+```
+
 ## 21일차
 
 ### 1번 문제
