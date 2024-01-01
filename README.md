@@ -16,6 +16,54 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/95e272b4-a208-4027-bd3f-45f44d067798)
+
+
+```java
+import java.util.*;
+
+class Solution {
+    public String solution(String a, String b) {
+        int[] aArray = new int[Math.max(a.length(), b.length())+1];
+        int[] bArray = new int[Math.max(a.length(), b.length())+1];
+        //두 수를 더해 자릿수가 추가될 수 있으므로 길이는 +1로 한다.
+
+        for(int i = a.length()-1; i >= 0 ; i--){
+            aArray[a.length()-1 - i] = Integer.parseInt(a.charAt(i)+"");
+        }
+        // 숫자의 역순으로 배열을 넣는다 예를 들어 1234 -> [4, 3, 2, 1]
+        
+        for(int i = b.length()-1; i >= 0 ; i--){
+            bArray[b.length()-1 - i] = Integer.parseInt(b.charAt(i)+"");
+        }
+        // b가 a보다 길이가 작다면 배열의 빈자리는 0으로 채워진다 123 -> [3, 2, 1, 0]
+        
+        for(int i = 0; i < aArray.length-1; i++){
+            int aNum = aArray[i];
+            int bNum = bArray[i];
+
+            int tenNum = (aNum + bNum) / 10;
+            aArray[i+1] = aArray[i+1] +tenNum; //두 수의 합이 10을 넘어가면 자릿수 올림을 해주는 코드
+             
+            int oneNum = (aNum + bNum) % 10;
+            aArray[i] = oneNum; // 두 수의 합의 일자리를 a배열의 추가한다.
+            
+        }
+        a배열에는 두 수의 합의 역순이 된다. a: 1234, b:123 -> a배열: [7, 5, 3, 1]
+        
+        StringBuilder answerStr = new StringBuilder();
+        
+        for(int i = aArray.length-1; i >= 0 ; i--){
+            if(aArray[i] == 0 && i == aArray.length-1) continue; //두 수의 합이 자릿수가 추가가 안될 경우 조합을 제외한다 123+123 -> [6, 4, 2, 0]
+            answerStr.append(aArray[i]); //a배열은 숫자 합의 역순으로 하였으므로 조립할때도 역순으로 조힙한다.
+        }
+
+        return answerStr.toString();
+    }
+}
+```
+
 ## 21일차
 
 ### 1번 문제
