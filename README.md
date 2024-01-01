@@ -88,8 +88,7 @@ class Solution {
 ```java
 class Solution {
     public int solution(double flo) {
-        String floStr = "" + flo;
-        return Integer.parseInt(floStr.split("\\.")[0]);
+        return (int) flo;
     }
 }
 ```
