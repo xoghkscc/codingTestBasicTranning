@@ -3,6 +3,18 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+## 22일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/225b1b45-313b-4164-b5a4-2aa4970f41bb)
+
+```java
+class Solution {
+    public String solution(String n_str) {
+        return Integer.toString(Integer.parseInt(n_str));
+    }
+}
+```
 
 ## 21일차
 
@@ -104,6 +116,17 @@ class Solution {
             answer += Integer.parseInt(""+num_str.charAt(i));
         }
         return answer;
+    }
+}
+```
+
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/8a836f21-2395-4f22-8e07-846b91e662da)
+
+```java
+class Solution {
+    public int solution(String n_str) {
+        return Integer.parseInt(n_str);
     }
 }
 ```
