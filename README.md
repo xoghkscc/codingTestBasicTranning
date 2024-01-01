@@ -50,7 +50,7 @@ class Solution {
             aArray[i] = oneNum; // 두 수의 합의 일자리를 a배열의 추가한다.
             
         }
-        a배열에는 두 수의 합의 역순이 된다. a: 1234, b:123 -> a배열: [7, 5, 3, 1]
+        // a배열에는 두 수의 합의 역순이 된다. a: 1234, b:123 -> a배열: [7, 5, 3, 1]
         
         StringBuilder answerStr = new StringBuilder();
         
