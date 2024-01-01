@@ -93,6 +93,21 @@ class Solution {
 }
 ```
 
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/77ba825c-bedd-41cd-b1ed-02940c9bf050)
+
+```java
+class Solution {
+    public int solution(String num_str) {
+        int answer = 0
+        for(int i = 0; i < num_str.length(); i++){
+            answer += Integer.parseInt(""+num_str.charAt(i));
+        }
+        return answer;
+    }
+}
+```
+
 ## 20일자
 
 ### 1번 문제
