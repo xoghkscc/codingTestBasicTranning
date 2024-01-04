@@ -73,6 +73,65 @@ class Solution {
 }
 ```
 
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/f7035a48-525a-424a-a2c8-e1df21491134)
+
+```java
+class Solution {
+    public int solution(int[][] arr) {
+        for(int i= 0; i < arr.length; i++){
+            for(int j = 0; j < arr.length; j++){
+                if(arr[i][j] != arr[j][i]){
+                    return 0;
+                }
+            }
+        }
+        return 1;
+    }
+}
+```
+
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/a26a0d75-68fa-4dac-bbd9-06c97f50f2d4)
+
+```java
+class Solution {
+    public int[][] solution(int[][] arr) {
+        int row = arr.length;
+        int column = arr[0].length;
+        
+        int maxLength = Math.max(row, column);
+        
+        int[][] answer = new int[maxLength][maxLength];
+        
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                answer[i][j] = arr[i][j];
+            }
+        }  
+        return answer;
+    }
+}
+```
+
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/84672760-dc58-45da-9ed3-379df96725fa)
+
+```java
+class Solution {
+    public int solution(int[][] board, int k) {
+        int answer = 0;
+        
+        for(int i = 0; i < board.length; i++){
+            for(int j = 0; j < board[0].length; j++){
+                if(i+j <= k) answer += board[i][j];
+            }
+        }    
+        return answer;
+    }
+}
+```
+
 ## 24일차
 
 ### 1번 문제
