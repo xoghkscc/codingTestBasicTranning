@@ -3,6 +3,31 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+## 24일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/470901dd-bcb2-48e2-9364-ce8ee8aa4357)
+
+```java
+class Solution {
+    public int solution(String[] order) {
+        int answer = 0;
+        
+        for(String str : order){
+            if(str.contains("latte")){
+                answer += 5000;
+            } else {
+                answer += 4500;
+            }
+        }     
+        return answer;
+    }
+}
+```
+
+### 2번 문제
+
+
 ## 23일차
 
 ### 1번 문제
