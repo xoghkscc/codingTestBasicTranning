@@ -26,6 +26,49 @@ class Solution {
 ```
 
 ### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/7e25cf2b-9664-49f3-97b0-dd164674558b)
+
+```java
+import java.util.*;
+class Solution {
+    public String[] solution(String[] picture, int k) {
+        ArrayList<String> list = new ArrayList<>();
+
+        for(String str : picture){                        //.xx...xx.를 가져오자
+            for(int i = 0; i < k; i++){                   //2배만큼 list에 더 담아야함
+                StringBuilder sb = new StringBuilder();
+                for(int j = 0; j < str.length(); j++){    //.을 가져오자
+                    for(int l = 0; l < k; l++){
+                        sb.append(str.charAt(j));         //.을 2배만큼 sb에 붙인다. -> ..
+                    } 
+                }                                        //그 다음인 x를 가져온다
+                list.add(sb.toString());                 //..xxxx......xxxx..를 넣는다.
+            } 
+        }
+        return list.toArray(new String[list.size()]);
+    }
+}
+```
+
+```java
+class Solution {
+    public String[] solution(String[] picture, int k) {
+        String x = "";
+        String y = "";          
+        for (int i=0; i<k;i++) { //k배만큼 .과 x를 붙인다.
+            x += ".";
+            y += "x";
+        }
+        List<String> list = new ArrayList<>();
+        for (int i=0; i<picture.length;i++) {
+            for (int j=0;j<k;j++){              
+                list.add(picture[i].replaceAll("[.]", x).replaceAll("[x]", y)); //배열의 .과 x를 k배만큼 붙인 것으로 replace를 한다. 그리고 k배만큼 list에 추가!
+            }
+        }
+        return list.stream().toArray(String[]::new);
+    }
+}
+```
 
 
 ## 23일차
