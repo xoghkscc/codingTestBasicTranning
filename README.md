@@ -3,6 +3,94 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+## 23일차
+
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/ca61b987-ebc7-4303-9915-aff8c53858b4)
+
+```java
+class Solution {
+    public int solution(String str1, String str2) {
+        int answer = 0;
+        return str2.contains(str1) ? 1 : 0;
+    }
+}
+```
+
+### 2번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/355cab9d-eaaf-4b1a-95db-cb6c20c6c511)
+
+```java
+class Solution {
+    public String solution(String[] str_list, String ex) {
+        StringBuilder sb = new StringBuilder();
+        
+        for(String str : str_list){
+            if(!str.contains(ex)){
+                sb.append(str);
+            }
+        }
+        return sb.toString();
+    }
+}
+```
+
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/1cd1ed45-ef9e-45df-98bd-c901f615e36b)
+
+```java
+class Solution {
+    public int solution(int[] num_list, int n) {
+        int answer = 0;
+        
+        for(int num : num_list){
+            if(num == n){
+                answer = 1;
+                break;
+            }
+        }  
+        return answer;
+    }
+}
+```
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/1f42708e-ac54-4eb7-97e0-96a252205a96)
+
+```java
+class Solution {
+    public int solution(int a, int b) {
+        int answer = 0;
+        if(a % 2 == 1 && b % 2 == 1) {
+            answer += Math.pow(a, 2) + Math.pow(b, 2);
+        } else if(a % 2 != 1 && b % 2 != 1) {
+            answer += Math.max(a-b, b-a);
+        } else {
+            answer += 2*(a+b);
+        }   
+        return answer;
+    }
+}
+```
+
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/efc40aee-411e-4dd4-b970-f7a6d697356b)
+
+```java
+class Solution {
+    public int solution(int[] date1, int[] date2) {
+        StringBuilder data_yyyymmdd1 = new StringBuilder();
+        StringBuilder data_yyyymmdd2 = new StringBuilder();
+        
+        for(int i = 0; i < date1.length; i++){
+            data_yyyymmdd1.append("" + date1[i]);
+            data_yyyymmdd2.append("" + date2[i]);
+            }
+        return Integer.parseInt(data_yyyymmdd1.toString()) < Integer.parseInt(data_yyyymmdd2.toString()) ? 1 : 0;
+    }
+}
+```
+
+
 ## 22일차
 
 ### 1번 문제
