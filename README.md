@@ -3,6 +3,89 @@
 ## 참고할 사이트
 ### https://earthteacher.tistory.com/169#gsc.tab=0
 
+## 25일차
+### 1번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/16b40e25-8249-491a-beb8-f9f8baa1080f)
+
+```java
+class Solution {
+    public int[][] solution(int n) {
+        int[][] answer = new int[n][n];
+
+        int i = 0; //y좌표
+        int j = 0; //x좌표
+        int direction = 0; //%4를 하였을 때 0이면 오른쪽 1이면 아래 2면 왼쪽 3이면 위쪽
+        for(int cnt = 1; cnt <= n*n; cnt++){
+            if(direction % 4 == 0){
+                answer[i][j] = cnt;
+                j++;
+                if(j == n || answer[i][j] != 0) { //오른쪽으로 가다 끝에 다다르거나 기존에 존재한 값이 있을 경우
+                    j--; //왼쪽으로 한번 되돌려주고
+                    i++; //밑으로 한칸가기
+                    direction++;
+                }
+            } else if(direction % 4 == 1){
+                answer[i][j] = cnt;
+                i++;
+                if(i == n || answer[i][j] != 0) { //아래로 가다 끝에 다다르거나 기존에 존재한 값이 있을 경우
+                    i--; //위로 한번 되돌려주고
+                    j--; //왼쪽으로 한칸가기
+                    direction++;
+                }
+            } else if(direction % 4 == 2){
+                answer[i][j] = cnt;
+                j--;
+                if(j == -1 || answer[i][j] != 0) { //왼쪽으로 가다 끝에 다다르거나 기존에 존재한 값이 있을 경우
+                    j++; //오른쪽으로 한번 되돌려주고
+                    i--; //위로 한칸 가기
+                    direction++;
+                }
+            } else if(direction % 4 == 3){
+                answer[i][j] = cnt;
+                i--;
+                if(answer[i][j] != 0) { //위로 가다 기존에 존재한 값이 있을 경우
+                    i++; //아래로 한번 되돌려주고
+                    j++; //오른쪽으로 한칸 가
+                    direction++;
+                }
+            }
+        }  
+        return answer;
+    }
+}
+```
+
+*    기가 막힌 풀이
+```java
+class Solution {
+    public int[][] solution(int n) {
+        int[][] answer = new int[n][n];
+        int num = 1;
+        int x = 0, y = 0;
+        int dx[] = {0, 1, 0, -1};
+        int dy[] = {1, 0, -1, 0};
+        int direction = 0;
+
+        while (num <= n * n) {
+            answer[x][y] = num++;
+
+            int nx = x + dx[direction]; 
+            int ny = y + dy[direction];
+
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n || answer[nx][ny] != 0) {
+                direction = (direction + 1) % 4; //범위 밖에 나갔을 때 방향전환
+                nx = x + dx[direction];
+                ny = y + dy[direction];
+            }
+            x = nx;
+            y = ny;
+        }
+
+        return answer;
+    }
+}
+```
+
 ## 24일차
 
 ### 1번 문제
