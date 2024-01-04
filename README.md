@@ -107,6 +107,27 @@ class Solution {
     }
 }
 ```
+### 5번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/021d25ad-0df9-463c-b84c-4c54acf3fc7d)
+
+```java
+class Solution {
+    public int[][] solution(int n) {
+        int[][] answer = new int[n][n];
+        
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(i == j) {
+                    answer[i][j] = 1;
+                } else {
+                    answer[i][j] = 0;
+                }
+            }
+        }
+        return answer;
+    }
+}
+```
 
 
 ## 23일차
