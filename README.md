@@ -70,6 +70,44 @@ class Solution {
 }
 ```
 
+### 3번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/9e0f69bb-7eba-4cc9-b19d-3e50415032be)
+
+```java
+class Solution {
+    public int[] solution(int[] arr, int k) {
+        for(int i = 0; i < arr.length; i++){
+            if(k % 2 != 0){
+                arr[i] *= k;
+            } else {
+                arr[i] += k;
+            }
+        }
+        return arr;
+    }
+}
+```
+
+### 4번 문제
+![image](https://github.com/xoghkscc/codingTestBasicTranning/assets/82793713/2266dde2-32d9-4aab-87c9-1fdc53899d07)
+
+```java
+class Solution {
+    public String solution(String myString) {
+        StringBuilder answer = new StringBuilder();
+        
+        for(int i = 0; i < myString.length(); i++){
+            if(myString.charAt(i) < 'l'){
+                answer.append('l');
+            } else {
+                answer.append(myString.charAt(i));
+            }
+        }   
+        return answer.toString();
+    }
+}
+```
+
 
 ## 23일차
 
